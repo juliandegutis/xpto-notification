@@ -5,7 +5,10 @@ import java.util.Date;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
 
 @Entity
@@ -18,6 +21,8 @@ public class Notification implements Serializable {
 	private static final long serialVersionUID = 3728071663903210464L;
 	
 	@Id
+    @SequenceGenerator( name="serial", sequenceName="serial", allocationSize = 1 )
+	@GeneratedValue( strategy = GenerationType.SEQUENCE, generator="serial" )
 	@Column( name = "id_notificacao" )
 	private Long notificationId;
 	
