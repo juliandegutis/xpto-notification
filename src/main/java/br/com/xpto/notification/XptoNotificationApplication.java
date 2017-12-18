@@ -1,4 +1,4 @@
-package br.com.xpto.xptonotification;
+package br.com.xpto.notification;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
