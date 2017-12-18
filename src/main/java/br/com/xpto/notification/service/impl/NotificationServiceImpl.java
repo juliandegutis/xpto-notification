@@ -63,7 +63,7 @@ public class NotificationServiceImpl extends GenericServiceImpl< Notification, L
 
 		String body = parameter.getParameterValue();
 		
-		body = body.replace( "#USERNAME#", notification.getUsername() ).replace( "SMRACODE", notification.getSmraCode() );
+		body = body.replace( "#USERNAME#", notification.getUsername() ).replace( "#SMRACODE#", notification.getSmraCode() );
 		
 		notification.setBody( body );
 		
